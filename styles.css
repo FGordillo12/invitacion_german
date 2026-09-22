@@ -1102,13 +1102,14 @@ footer {
     }
 
     .main-german-img {
-        width: 112%;
+        width: 125%;
         max-width: none;
         height: auto;
-        margin-left: -6%;
+        margin-left: -10%;
         object-fit: contain;
         object-position: top;
         position: relative;
+        transform: translateY(-24vw);
         z-index: 2;
         -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
         mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
@@ -1157,7 +1158,7 @@ footer {
         bottom: 0;
         left: auto;
         transform: none;
-        margin-top: 8px;
+        margin-top: calc(8px - 24vw);
         padding-bottom: 25px;
         z-index: 10;
         width: 100%;
