@@ -1096,16 +1096,16 @@ footer {
         overflow: hidden;
         display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         position: relative;
         margin-bottom: 0;
     }
 
     .main-german-img {
-        width: 100%;
-        max-width: 100%;
+        width: 112%;
+        max-width: none;
         height: auto;
-        margin-left: 0;
+        margin-left: -6%;
         object-fit: contain;
         object-position: top;
         position: relative;
@@ -1117,8 +1117,8 @@ footer {
     .hero-description-floating {
         display: block;
         position: absolute;
-        right: 4%;
-        top: 42%;
+        right: 3%;
+        top: 4%;
         width: min(55%, 210px);
         max-width: calc(100% - 16px);
         line-height: 1.35;
@@ -1234,7 +1234,7 @@ footer {
         font-size: clamp(32px, 12vw, 40px);
     }
     .hero-description-floating {
-        top: 38%;
+        top: 4%;
         right: 3%;
         width: min(58%, 190px);
         padding: 8px 10px;
