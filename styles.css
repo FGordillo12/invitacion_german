@@ -150,14 +150,14 @@ p {
 
 @media (max-width: 900px) {
     .palm-left {
-        width: 380px;
-        top: 10px;
-        left: -30px;
+        width: 220px;
+        top: 600px;
+        left: 230px;
     }
     .palm-right {
         width: 190px;
-        top: 5px;
-        right: -30px;
+        top: 15px;
+        right: 130px;
     }
 }
 
