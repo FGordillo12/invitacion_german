@@ -569,11 +569,32 @@ nav a:hover {
     content: "✿";
     position: absolute;
     right: -28px;
-    bottom: -80px;
+    top: -125px;
     color: rgba(255,255,255,.045);
-    font-size: 300px;
+    font-size: 270px;
     line-height: 1;
     pointer-events: none;
+    z-index: 0;
+}
+
+.event-palm-decoration {
+    position: absolute;
+    right: -10%;
+    bottom: -5%;
+    height: 76%;
+    max-height: 760px;
+    width: auto;
+    object-fit: contain;
+    opacity: .26;
+    pointer-events: none;
+    z-index: 0;
+    transform: scaleX(-1);
+}
+
+.event-intro,
+.event-details {
+    position: relative;
+    z-index: 1;
 }
 
 .event-intro > span {
