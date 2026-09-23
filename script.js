@@ -74,7 +74,7 @@ setInterval(
 ===================================================== */
 const animatedElements =
     document.querySelectorAll(
-        ".time-box, .event-card, .video-container, .location-grid, .dress-container"
+        ".time-box, .event-card, .location-grid, .dress-container"
     );
 
 const observer =
@@ -107,25 +107,3 @@ animatedElements.forEach(
     }
 );
 
-/* =====================================================
-   VIDEO
-===================================================== */
-const video =
-    document.querySelector(
-        ".video-container video"
-    );
-
-const videoMessage =
-    document.querySelector(
-        ".video-message"
-    );
-
-if (video) {
-    video.addEventListener(
-        "loadeddata",
-        function() {
-            videoMessage.style.display =
-                "none";
-        }
-    );
-}
