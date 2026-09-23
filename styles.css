@@ -891,14 +891,60 @@ nav a:hover {
 }
 
 .dress-note {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
     margin-top: 22px;
-    padding: 16px 18px;
-    border-left: 4px solid var(--orange);
-    border-radius: 0 14px 14px 0;
+    padding: 18px 20px;
+    overflow: hidden;
+    border: 1px solid rgba(209, 139, 64, .26);
+    border-radius: 20px;
     color: #52675f;
-    background: rgba(255,255,255,.45);
+    background: linear-gradient(120deg, #ffe3ac, #fff3d7 72%);
+    box-shadow: 0 12px 26px rgba(117, 88, 42, .1);
+}
+
+.dress-note-flower {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.68);
+    font-size: 25px;
+}
+
+.dress-note-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.dress-note-copy strong {
+    display: block;
+    color: var(--green);
+    font-family: "Bangers", cursive;
+    font-size: 20px;
+    letter-spacing: .04em;
+}
+
+.dress-note-copy p {
+    margin-top: 3px;
     font-size: 13px;
     line-height: 1.6;
+}
+
+.dress-note-palm {
+    position: absolute;
+    right: -5px;
+    bottom: -23px;
+    color: var(--green);
+    font-size: 66px;
+    opacity: .12;
+    transform: rotate(-12deg);
 }
 
 /* =====================================================
