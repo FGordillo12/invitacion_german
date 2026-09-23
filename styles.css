@@ -800,7 +800,7 @@ nav a:hover {
     bottom: 17px;
     left: 16px;
     width: auto;
-    padding: 16px 18px;
+    padding: 10px 13px;
     border: 1px solid rgba(255, 218, 158, .42);
     border-radius: 18px;
     color: #fff8e9;
@@ -813,7 +813,7 @@ nav a:hover {
 .photo-placeholder-copy small {
     display: block;
     color: #ffd08e;
-    font-size: 9px;
+    font-size: 7px;
     font-weight: 800;
     letter-spacing: .15em;
 }
@@ -823,17 +823,17 @@ nav a:hover {
     display: block;
     width: 30px;
     height: 2px;
-    margin-top: 8px;
+    margin-top: 5px;
     border-radius: 2px;
     background: #ef8657;
 }
 
 .photo-placeholder-copy strong {
     display: block;
-    margin-top: 8px;
+    margin-top: 5px;
     font-family: "Bangers", cursive;
-    font-size: clamp(25px, 3vw, 32px);
-    line-height: 1.08;
+    font-size: clamp(20px, 2.5vw, 25px);
+    line-height: 1.01;
     letter-spacing: .025em;
 }
 
@@ -844,9 +844,9 @@ nav a:hover {
 
 .photo-placeholder-copy > span {
     display: block;
-    margin-top: 8px;
+    margin-top: 4px;
     color: rgba(255, 248, 233, .86);
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.5;
 }
 
