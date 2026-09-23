@@ -178,17 +178,18 @@ p {
 @media (max-width: 650px) {
     .palm-decor {
         opacity: .9;
+        max-width: none;
     }
     .palm-left {
-        width: min(150px, 40vw);
+        width: min(280px, 65vw);
         top: auto;
-        bottom: 6%;
-        left: -14%;
+        bottom:2%;
+        left: 30%; 
     }
     .palm-right {
-        width: min(150px, 38vw);
-        top: 4px;
-        right: -14%;
+        width: min(280px, 65vw);
+        top: 20px;
+        right: 39%;
     }
 }
 
@@ -1028,6 +1029,7 @@ footer {
         max-width: 100%;
         min-height: 0;
         width: 100%;
+        padding-top: 0;
     }
 
     .hero-text {
@@ -1037,7 +1039,7 @@ footer {
         align-items: center;
         margin-bottom: 0;
         z-index: 6;
-        padding: 12px 8px 0;
+        padding: 6px 8px 0;
         max-width: 100%;
     }
     
@@ -1158,7 +1160,7 @@ footer {
         bottom: 0;
         left: auto;
         transform: none;
-        margin-top: calc(8px - 24vw);
+        margin-top: calc(8px - 34vw);
         padding-bottom: 25px;
         z-index: 10;
         width: 100%;
