@@ -1001,7 +1001,7 @@ nav a:hover {
    UBICACIÓN
 ===================================================== */
 .location-section {
-    padding: 0 0 100px;
+    padding: 0 0 36px;
     overflow: hidden;
 }
 
@@ -1127,6 +1127,20 @@ nav a:hover {
     z-index: 3;
     box-shadow: 0 22px 55px rgba(40,70,50,.2);
     border: 8px solid rgba(255,255,255,.58);
+    color: var(--green);
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow .25s ease, transform .25s ease;
+}
+
+.map-circle:hover {
+    transform: translate(-50%, -50%) scale(1.035);
+    box-shadow: 0 25px 62px rgba(40,70,50,.28);
+}
+
+.map-circle:focus-visible {
+    outline: 3px solid #ef8657;
+    outline-offset: 5px;
 }
 
 .pin {
@@ -1564,7 +1578,7 @@ footer {
         font-size: 11px;
     }
     .location-section {
-        padding-bottom: 70px;
+        padding-bottom: 24px;
     }
     .location-grid {
         border-radius: 24px;
