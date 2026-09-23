@@ -1121,7 +1121,7 @@ footer {
         display: block;
         position: absolute;
         right: 3%;
-        top: 7%;
+        top: 9%;
         width: min(55%, 210px);
         max-width: calc(100% - 16px);
         line-height: 1.35;
