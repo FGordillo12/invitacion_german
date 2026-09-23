@@ -184,12 +184,12 @@ p {
         width: min(280px, 65vw);
         top: auto;
         bottom:2%;
-        left: 30%; 
+        left: 35%; 
     }
     .palm-right {
         width: min(280px, 65vw);
-        top: 20px;
-        right: 39%;
+        top: 15px;
+        right: 42%;
     }
 }
 
