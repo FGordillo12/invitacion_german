@@ -147,6 +147,11 @@ p {
     height: auto;
 }
 
+.hero-hawaiian-accent {
+    display: none;
+    pointer-events: none;
+}
+
 .palm-left {
     left: -8%;
     top: 12px;
@@ -176,6 +181,22 @@ p {
 }
 
 @media (max-width: 650px) {
+    .hero-hawaiian-accent {
+        display: block;
+        position: absolute;
+        top: -5%;
+        right: -14%;
+        width: min(430px, 88vw);
+        height: auto;
+        opacity: .3;
+        filter: saturate(.85);
+        -webkit-mask-image: radial-gradient(ellipse 83% 76% at 100% 0%, #000 34%, rgba(0, 0, 0, .88) 58%, transparent 100%);
+        mask-image: radial-gradient(ellipse 83% 76% at 100% 0%, #000 34%, rgba(0, 0, 0, .88) 58%, transparent 100%);
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+        z-index: 1;
+    }
+
     .palm-decor {
         opacity: .9;
         max-width: none;
