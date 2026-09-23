@@ -774,34 +774,45 @@ nav a:hover {
         linear-gradient(145deg, #f9c87d, #e99562 55%, #2f6a60 55%, #174b45);
 }
 
-.photo-placeholder::before,
+.family-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
 .photo-placeholder::after {
     content: "";
     position: absolute;
-    width: 125%;
-    height: 36px;
-    border: 2px solid rgba(255,255,255,.2);
-    border-radius: 50%;
-    transform: rotate(-20deg);
+    z-index: 1;
+    inset: 28% 0 0;
+    background: linear-gradient(180deg, transparent 4%, rgba(14, 52, 47, .08) 35%, rgba(14, 52, 47, .76) 100%);
+    pointer-events: none;
 }
 
-.photo-placeholder::before { top: 16%; left: -10%; }
-.photo-placeholder::after { bottom: 12%; right: -12%; }
-
 .photo-placeholder-copy {
-    position: relative;
-    z-index: 1;
-    width: min(78%, 330px);
-    padding: 28px 22px;
-    border: 1px solid rgba(255,255,255,.65);
-    border-radius: 22px;
-    background: rgba(255,250,240,.9);
-    box-shadow: 0 15px 35px rgba(20,60,50,.16);
+    position: absolute;
+    z-index: 2;
+    right: 16px;
+    bottom: 17px;
+    left: 16px;
+    width: auto;
+    padding: 16px 18px;
+    border: 1px solid rgba(255, 218, 158, .42);
+    border-radius: 18px;
+    color: #fff8e9;
+    text-align: left;
+    background: rgba(17, 71, 63, .82);
+    box-shadow: 0 12px 28px rgba(8, 34, 30, .22), inset 0 1px rgba(255,255,255,.15);
+    backdrop-filter: blur(8px);
 }
 
 .photo-placeholder-copy small {
     display: block;
-    color: var(--orange);
+    color: #ffd08e;
     font-size: 9px;
     font-weight: 800;
     letter-spacing: .18em;
@@ -809,16 +820,16 @@ nav a:hover {
 
 .photo-placeholder-copy strong {
     display: block;
-    margin-top: 12px;
+    margin-top: 6px;
     font-family: "Bangers", cursive;
-    font-size: clamp(28px, 4vw, 40px);
+    font-size: clamp(24px, 3.3vw, 34px);
     line-height: 1.05;
 }
 
 .photo-placeholder-copy > span {
     display: block;
-    margin-top: 12px;
-    color: var(--text-light);
+    margin-top: 5px;
+    color: rgba(255, 248, 233, .86);
     font-size: 12px;
     line-height: 1.5;
 }
@@ -1594,11 +1605,14 @@ footer {
         font-size: 14px;
     }
     .photo-placeholder {
-        min-height: 300px;
+        min-height: 340px;
     }
     .photo-placeholder-copy {
-        width: 82%;
-        padding: 23px 16px;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        width: auto;
+        padding: 14px 15px;
     }
     .dress-section {
         padding: 24px 0 26px;
