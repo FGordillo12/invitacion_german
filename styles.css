@@ -815,20 +815,36 @@ nav a:hover {
     color: #ffd08e;
     font-size: 9px;
     font-weight: 800;
-    letter-spacing: .18em;
+    letter-spacing: .15em;
+}
+
+.photo-placeholder-copy small::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-top: 8px;
+    border-radius: 2px;
+    background: #ef8657;
 }
 
 .photo-placeholder-copy strong {
     display: block;
-    margin-top: 6px;
+    margin-top: 8px;
     font-family: "Bangers", cursive;
-    font-size: clamp(24px, 3.3vw, 34px);
-    line-height: 1.05;
+    font-size: clamp(25px, 3vw, 32px);
+    line-height: 1.08;
+    letter-spacing: .025em;
+}
+
+.photo-placeholder-copy strong em {
+    color: #ffc078;
+    font-style: normal;
 }
 
 .photo-placeholder-copy > span {
     display: block;
-    margin-top: 5px;
+    margin-top: 8px;
     color: rgba(255, 248, 233, .86);
     font-size: 12px;
     line-height: 1.5;
