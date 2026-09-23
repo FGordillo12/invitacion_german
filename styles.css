@@ -898,24 +898,45 @@ nav a:hover {
     margin-top: 22px;
     padding: 18px 20px;
     overflow: hidden;
-    border: 1px solid rgba(209, 139, 64, .26);
+    border: 1px solid rgba(255, 204, 126, .5);
     border-radius: 20px;
-    color: #52675f;
-    background: linear-gradient(120deg, #ffe3ac, #fff3d7 72%);
-    box-shadow: 0 12px 26px rgba(117, 88, 42, .1);
+    color: #fff7e8;
+    background: linear-gradient(118deg, #164b43 0%, #1e6257 58%, #2d7562 100%);
+    box-shadow: 0 14px 30px rgba(20, 60, 50, .2), inset 0 1px 0 rgba(255, 255, 255, .12);
 }
 
-.dress-note-flower {
+.dress-note-art {
     position: relative;
     z-index: 1;
-    flex: 0 0 auto;
-    display: grid;
-    place-items: center;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.68);
-    font-size: 25px;
+    flex: 0 0 116px;
+    width: 116px;
+    height: 138px;
+    isolation: isolate;
+}
+
+.dress-note-rays {
+    position: absolute;
+    z-index: -1;
+    inset: -16px -18px;
+    background:
+        radial-gradient(ellipse at 23% 30%, rgba(255, 215, 148, .52), transparent 62%),
+        radial-gradient(ellipse at 76% 72%, rgba(255, 168, 82, .35), transparent 58%),
+        radial-gradient(ellipse at 50% 52%, rgba(255, 244, 204, .24), transparent 72%);
+    filter: blur(13px);
+    opacity: .86;
+}
+
+.dress-note-portrait {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter:
+        drop-shadow(0 0 3px rgba(255, 242, 208, .55))
+        drop-shadow(0 0 9px rgba(255, 182, 83, .38))
+        drop-shadow(0 6px 7px rgba(12, 43, 36, .3));
 }
 
 .dress-note-copy {
@@ -925,7 +946,7 @@ nav a:hover {
 
 .dress-note-copy strong {
     display: block;
-    color: var(--green);
+    color: #ffc078;
     font-family: "Bangers", cursive;
     font-size: 20px;
     letter-spacing: .04em;
@@ -933,18 +954,20 @@ nav a:hover {
 
 .dress-note-copy p {
     margin-top: 3px;
+    color: rgba(255, 247, 232, .9);
     font-size: 13px;
     line-height: 1.6;
 }
 
 .dress-note-palm {
     position: absolute;
-    right: -5px;
-    bottom: -23px;
-    color: var(--green);
-    font-size: 66px;
-    opacity: .12;
+    right: -9px;
+    bottom: -26px;
+    color: #ffd28e;
+    font-size: 78px;
+    opacity: .2;
     transform: rotate(-12deg);
+    filter: drop-shadow(0 2px 5px rgba(255, 190, 105, .2));
 }
 
 /* =====================================================
@@ -1578,13 +1601,13 @@ footer {
         padding: 23px 16px;
     }
     .dress-section {
-        padding: 24px 0 70px;
+        padding: 24px 0 26px;
     }
     .dress-tags span {
         font-size: 11px;
     }
     .video-section {
-        padding: 72px 0;
+        padding: 40px 0 72px;
     }
     .video-container {
         border-width: 6px;
@@ -1638,6 +1661,11 @@ footer {
 }
 
 @media (max-width: 400px) {
+    .dress-note-art {
+        flex-basis: 96px;
+        width: 96px;
+        height: 122px;
+    }
     .ajolote-badge-title {
         font-size: clamp(20px, 7vw, 26px);
         padding: 5px 16px;
