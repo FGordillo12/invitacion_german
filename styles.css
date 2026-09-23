@@ -1238,7 +1238,7 @@ footer {
     }
     .hero-description-floating {
         top: 4%;
-        right: 3%;
+        right: 6%;
         width: min(58%, 190px);
         padding: 8px 10px;
     }
