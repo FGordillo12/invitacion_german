@@ -87,27 +87,9 @@
         </div>
     </section>
 
-    <!-- =========================================
-         REPRODUCTOR DE MÚSICA
-    ========================================== -->
-    <section class="music-section" aria-label="Música de la invitación">
-        <div class="container">
-            <div class="music-card">
-                <button class="music-toggle" id="music-toggle" type="button" aria-label="Reproducir canción" aria-pressed="false">
-                    <span class="music-play-icon" aria-hidden="true">▶</span>
-                </button>
-                <div class="music-copy">
-                    <span class="music-eyebrow">AMBIENTA LA CELEBRACIÓN</span>
-                    <strong id="music-title">Un ritmo para celebrar</strong>
-                    <span id="music-status" aria-live="polite">Toca para escuchar</span>
-                </div>
-                <span class="music-note" aria-hidden="true">♪</span>
-                <audio id="invitation-song" preload="metadata">
-                    <source src="assets/aloha-cancion.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-        </div>
-    </section>
+    <audio id="invitation-song" preload="metadata" aria-hidden="true">
+        <source src="assets/aloha-cancion.mp3" type="audio/mpeg">
+    </audio>
 
     <!-- =========================================
          CUENTA REGRESIVA

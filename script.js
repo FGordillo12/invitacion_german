@@ -73,45 +73,28 @@ setInterval(
    MÚSICA DE LA INVITACIÓN
 ===================================================== */
 const song = document.getElementById("invitation-song");
-const musicToggle = document.getElementById("music-toggle");
-const musicStatus = document.getElementById("music-status");
+let songStarted = false;
 
-musicToggle.addEventListener("click", async function() {
-    if (!song.paused) {
-        song.pause();
-        return;
-    }
+async function startSongOnFirstScroll() {
+    if (songStarted) return;
 
     try {
-        // La canción comienza en el segundo 16, también al volver a reproducirla.
-        if (song.currentTime < 16 || song.ended) {
-            song.currentTime = 16;
-        }
+        // La canción comienza en el segundo 16 tras el primer desplazamiento.
+        if (song.currentTime < 16) song.currentTime = 16;
         await song.play();
+        songStarted = true;
+        window.removeEventListener("scroll", startSongOnFirstScroll);
+        window.removeEventListener("wheel", startSongOnFirstScroll);
+        window.removeEventListener("touchmove", startSongOnFirstScroll);
     } catch (error) {
-        musicStatus.textContent = "No se pudo cargar la canción";
+        // Algunos navegadores no consideran el scroll una acción que habilite audio.
+        // Se conserva el intento para el siguiente gesto de desplazamiento.
     }
-});
+}
 
-song.addEventListener("play", function() {
-    musicToggle.setAttribute("aria-pressed", "true");
-    musicToggle.setAttribute("aria-label", "Pausar canción");
-    musicToggle.classList.add("is-playing");
-    musicToggle.querySelector(".music-play-icon").textContent = "Ⅱ";
-    musicStatus.textContent = "Reproduciendo";
-});
-
-song.addEventListener("pause", function() {
-    musicToggle.setAttribute("aria-pressed", "false");
-    musicToggle.setAttribute("aria-label", "Reproducir canción");
-    musicToggle.classList.remove("is-playing");
-    musicToggle.querySelector(".music-play-icon").textContent = "▶";
-    if (!song.ended) musicStatus.textContent = "En pausa";
-});
-
-song.addEventListener("ended", function() {
-    musicStatus.textContent = "La canción terminó · toca para repetir";
-});
+window.addEventListener("scroll", startSongOnFirstScroll, { passive: true });
+window.addEventListener("wheel", startSongOnFirstScroll, { passive: true });
+window.addEventListener("touchmove", startSongOnFirstScroll, { passive: true });
 
 /* =====================================================
    ANIMACIONES AL HACER SCROLL

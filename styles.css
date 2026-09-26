@@ -465,56 +465,6 @@ nav a:hover {
 /* =====================================================
    CUENTA REGRESIVA CON SILUETAS DE PIÑAS Y ESPACIO REDUCIDO
 ===================================================== */
-.music-section {
-    padding: 20px 0 0;
-    background: rgba(255, 255, 255, .6);
-}
-
-.music-card {
-    max-width: 470px;
-    margin: 0 auto;
-    padding: 13px 18px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(23, 75, 69, .14);
-    border-radius: 18px;
-    background: linear-gradient(120deg, #fffdf8, #f7edda);
-    box-shadow: 0 8px 24px rgba(23, 75, 69, .09);
-}
-
-.music-toggle {
-    width: 46px;
-    height: 46px;
-    flex: 0 0 46px;
-    display: grid;
-    place-items: center;
-    border: 0;
-    border-radius: 50%;
-    color: #fffdf8;
-    background: var(--green);
-    cursor: pointer;
-    box-shadow: 0 5px 14px rgba(23, 75, 69, .2);
-    transition: transform .2s ease, background .2s ease;
-}
-
-.music-toggle:hover { transform: scale(1.06); background: var(--green-light); }
-.music-toggle.is-playing { background: var(--orange); }
-.music-play-icon { font-size: 17px; line-height: 1; }
-
-.music-copy { min-width: 0; display: grid; gap: 2px; }
-.music-eyebrow {
-    color: var(--orange);
-    font: 700 9px "DM Sans", sans-serif;
-    letter-spacing: .16em;
-}
-.music-copy strong { color: var(--green); font: 600 16px "Playfair Display", serif; }
-.music-copy > span:last-child { color: var(--text-light); font-size: 11px; }
-.music-note { margin-left: auto; color: var(--orange-light); font: 42px "Playfair Display", serif; }
-.music-toggle:focus-visible { outline: 3px solid var(--orange-light); outline-offset: 3px; }
-
 .countdown-section {
     padding: 40px 0 45px 0;
     background: 
